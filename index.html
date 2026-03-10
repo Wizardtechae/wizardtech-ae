@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wizard Computer Trading – Laptop Repair & Custom PC Building in Ras Al Khaimah, UAE</title>
+<meta name="description" content="Wizard Computer Trading in RAK — laptop repair, custom gaming PCs, screen replacement, data recovery, IT support and networking in Ras Al Khaimah, UAE.">
+<meta name="keywords" content="laptop repair RAK, computer repair Ras Al Khaimah, custom gaming PC UAE, IT support RAK, screen replacement RAK">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F07820;
+      --orange-dark: #c45e10;
+      --grey: #999999;
+      --grey-dark: #e0e0e0;
+      --grey-light: #1e1e1e;
+      --white: #141414;
+      --card-bg: #1a1a1a;
+      --nav-bg: rgba(14,14,14,0.97);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--grey-dark);
+      background: #0e0e0e;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(14,14,14,0.97);
+      border-bottom: 3px solid var(--orange);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 70px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-logo img {
+      height: 54px; width: auto;
+      mix-blend-mode: lighten;
+    }
+    .nav-links {
+      display: flex; gap: 32px; list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: var(--grey);
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+
+    /* HERO */
+    .hero {
+      margin-top: 70px;
+      background: #0e0e0e;
+      min-height: 520px;
+      display: flex; align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 48px;
+      border-bottom: 1px solid #222;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,120,32,0.15) 0%, transparent 70%);
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: 30%;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,120,32,0.08) 0%, transparent 70%);
+    }
+    .hero-content {
+      max-width: 680px;
+      position: relative; z-index: 1;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero p {
+      font-size: 18px;
+      color: #cccccc;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+      margin-left: 12px;
+    }
+    .btn-outline:hover { background: var(--orange); color: white; }
+
+    /* SERVICES */
+    .services {
+      padding: 90px 48px;
+      background: #111111;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .section-header h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 600;
+      color: #e0e0e0;
+    }
+    .section-header h2 span { color: var(--orange); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #1a1a1a;
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+      border: 1px solid #252525;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 0; height: 3px;
+      background: var(--orange);
+      transition: width 0.3s;
+    }
+    .service-card:hover { background: #222; }
+    .service-card:hover::before { width: 100%; }
+    .service-card:hover .service-title { color: var(--orange); }
+    .service-card:hover .service-desc { color: #bbb; }
+    .service-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+    .service-desc {
+      font-size: 15px;
+      color: #777;
+      line-height: 1.6;
+      transition: color 0.3s;
+    }
+
+    .why {
+      background: #0e0e0e;
+      padding: 90px 48px;
+      color: white;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+    .why .section-header h2 { color: #e0e0e0; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .why-item {}
+    .why-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .why-label {
+      font-size: 15px;
+      color: #cccccc;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 90px 48px;
+      background: #111111;
+    }
+    .contact-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 16px;
+      color: #999;
+    }
+    .contact-item span:first-child {
+      font-size: 20px;
+    }
+    .contact-item a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--orange); }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a1a;
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p {
+      font-size: 13px;
+      color: #666;
+    }
+    footer span { color: var(--orange); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero, .services, .why, .contact { padding-left: 24px; padding-right: 24px; }
+      footer { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <!-- Replace the src below with your actual logo path once uploaded -->
+      <img src="logo.png" alt="Wizard Computers Logo" onerror="this.style.display='none'">
+      <span style="font-family:'Oswald',sans-serif; font-size:20px; font-weight:600; color:#F07820; letter-spacing:1px;">WIZARD <span style="color:#666">COMPUTERS</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Based in UAE</div>
+      <h1><span style="color:#ffffff;">Your Trusted</span><br><span>Technology Partner</span><br><span style="color:#ffffff;">in the UAE</span></h1>
+      <p>Computers, accessories, software, and IT support solutions for businesses and individuals across the Emirates.</p>
+      <a href="#services" class="btn">Our Services</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <div class="section-tag">What We Offer</div>
+      <h2>Our <span>Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">💻</span>
+        <div class="service-title">Computers & Laptops</div>
+        <p class="service-desc">Wide range of desktops, laptops, and workstations from leading brands, suited for home, business, and enterprise use.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🖱️</span>
+        <div class="service-title">Software & Accessories</div>
+        <p class="service-desc">Licensed software solutions, peripherals, and accessories to complete your setup and boost productivity.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <div class="service-title">IT Support & Services</div>
+        <p class="service-desc">Professional IT support, maintenance, and troubleshooting for individuals and businesses across the UAE.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2>Trusted by <span>Businesses Across UAE</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-number">5+</div>
+        <div class="why-label">Years of Experience</div>
+      </div>
+      <div class="why-item">
+        <div class="why-number">10K+</div>
+        <div class="why-label">Happy Customers</div>
+      </div>
+      <div class="why-item">
+        <div class="why-number">100%</div>
+        <div class="why-label">Genuine Products</div>
+      </div>
+      <div class="why-item">
+        <div class="why-number">UAE</div>
+        <div class="why-label">Based & Operated</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-header">
+        <div class="section-tag">Reach Us</div>
+        <h2>Get in <span>Touch</span></h2>
+      </div>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span>📍</span>
+          <span>United Arab Emirates</span>
+        </div>
+        <div class="contact-item">
+          <span>💬</span>
+          <a href="https://wa.me/971549982888" target="_blank">+971 54 998 2888 (WhatsApp)</a>
+        </div>
+        <div class="contact-item">
+          <span>📞</span>
+          <a href="tel:+97172280220">+971 7 228 0220 (Landline)</a>
+        </div>
+<div class="contact-item">
+  <span>✉️</span>
+  <a href="mailto:sales@wizardtech.ae">sales@wizardtech.ae</a>
+</div>
+        <div class="contact-item">
+          <span>🌐</span>
+          <a href="https://wizardtech.ae">wizardtech.ae</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <foote
